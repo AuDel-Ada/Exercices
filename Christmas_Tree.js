@@ -25,9 +25,9 @@ function sapin2(n) {
     line1.unshift(" ");
   };
 
-  console.log(star.toString());
-  console.log(top.toString());
-  console.log(line1.toString())
+  console.log(star.join(""));
+  console.log(top.join(""));
+  console.log(line1.join(""))
 
   // Create Middle of the Christmas Tree : 
   let line2 = ["/*","*","*\\"];
@@ -35,7 +35,7 @@ function sapin2(n) {
   for (i=1; i<=n ; i++){
     line2.splice(n, 0, "*");
   };
-  console.log(line2.toString())
+  console.log(line2.join(""))
 };
 
 sapin2(2);
