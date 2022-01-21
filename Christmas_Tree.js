@@ -1,33 +1,20 @@
-function sapin1(n) {
-  const star = "  +"
-  const top = " /*\\";
+function sapin(n) {
 
-  console.log(star);
-  console.log(top);
-
-  for (i=1; i<=n ; i++){
-    const line = "/***\\";
-    console.log(line)
-  };
-};
-
-sapin1(1);
-
-function sapin2(n) {
+  // Create Top of the Christmas Tree :
   let star = ["  ","+"];
   let top = [" ","/*\\"];
   let line1 = ["/*","*","*\\"];
 
-  // Create Top of the Christmas Tree :
-  for (i=1; i<n ; i++){
-    star.unshift(" ");
-    top.unshift(" ");
-    line1.unshift(" ");
-  };
+  function createTop (array) {
+    for (i=1; i<n ; i++) {
+      array.unshift(" ");
+    }
+    console.log(array.join(""));
+  }
 
-  console.log(star.join(""));
-  console.log(top.join(""));
-  console.log(line1.join(""))
+  createTop(star);
+  createTop(top);
+  createTop(line1);
 
   // Create Middle of the Christmas Tree : 
   let line2 = ["/*","*","*\\"];
@@ -36,10 +23,10 @@ function sapin2(n) {
     return
   } else {
     for (i=1; i<=n ; i++){
-      line2.splice(n, 0, "*");
+      line2.splice(n,0,"*");
     };
     console.log(line2.join(""))
-  }
+  };
 };
 
-sapin2(1);
+sapin(2);
