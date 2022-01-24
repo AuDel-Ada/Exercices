@@ -1,5 +1,8 @@
 # Exercices
 
+## Heritage
+Treasure hunt
+
 ## Christmas Tree - L'algorithme du sapin 🌲🎄
 Ecrivez une fonction `sapin()` dans le langage de votre choix, qui prend en entrée un nombre entier et qui affiche un sapin, avec la logique suivante :
 
