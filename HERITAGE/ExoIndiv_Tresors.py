@@ -26,9 +26,10 @@ Password = response1 + response2 + response3
 print ("Password to enter to tresor2 :", Password)
 print ("##### NEXT LEVEL #####")
 
+
 #LEVEL 3
 from itertools import chain, combinations
-import os 
+import subprocess
 
 print("List of Password to try with tresor3 :")
 PasswordEnd = ["Linus", "docker", "if", "opéra", "468153084652"]
@@ -50,3 +51,5 @@ for world in powerset(PasswordEnd):
         set2 += element
     print(set2)
 
+# Command line
+subprocess.Popen(['unrar', 'e', 'tresor3.rar'])
