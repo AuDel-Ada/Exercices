@@ -36,5 +36,9 @@ child = pexpect.spawn ("unrar", ["e", "tresor2.rar"])
 child.expect ("password")
 time.sleep (0.1)
 child.sendline (Password)
-time.sleep (2)
-print ("Process completed")
+choices = child.expect (["incorrect", "xtracting"])
+if choices == 0 :
+    print ("Wrong password")
+if choices == 1 :
+    time.sleep (2)
+    print ("Process completed")
